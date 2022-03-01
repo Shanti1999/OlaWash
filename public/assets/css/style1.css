@@ -1,0 +1,420 @@
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+}
+
+
+/* Works on Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #ff0000;
+}
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.go-top {
+    right: 2em;
+    bottom: 2em;
+    width: 40px;
+    height: 40px;
+    line-height: 2;
+    font-size: 15px;
+    z-index: 999;
+    text-decoration: none;
+    background: #000000;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid #e0e0e0;
+    position: fixed;
+}
+
+.slider-wrapper {
+    background: rgb(255, 255, 255);
+}
+
+.side_heading {
+    color: #ff0000;
+    text-align: center;
+}
+
+.side_heading1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 2% 0%;
+    font-size: 40px;
+}
+
+.side_text {
+    font-size: 22px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.slider {
+    margin: 5% 0%;
+}
+
+.flex {
+    display: flex!important;
+    flex-direction: row!important;
+    justify-content: flex-start!important;
+}
+
+.slider-wrapper div {
+    position: relative;
+}
+
+.slider-wrapper {
+    margin-top: 5vw;
+    flex-direction: row;
+    width: 100%;
+}
+
+.slide-image {
+    height: 25vw;
+}
+
+.slide-image img {
+    width: 25vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+.paragraph_p {
+    text-align: left;
+    padding-top: 2%;
+}
+
+.slide-content {
+    width: 25vw;
+    color: rgb(255, 255, 255);
+    background: #000;
+    background-image: url(https://olacarwash.com/inside/images/misc/ola-car-wash-footer-background.png);
+    padding: 0vw 3vw;
+}
+
+.slide-date {
+    color: #ff0000;
+    font-size: 1.1vw;
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    padding-bottom: 1.4vw;
+    padding-top: 5%;
+    text-align: left;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.slide-title {
+    font-size: 1.7vw;
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    line-height: 1.55vw;
+    padding-bottom: 1.8vw;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+font-size: 17px;
+font-weight: 500;
+}
+
+.side_slide {
+    width: 100%;
+    background: #000;
+    background-image: url(https://olacarwash.com/inside/images/misc/ola-car-wash-footer-background.png);
+}
+
+.slide-text {
+    font-size: 1vw;
+    line-height: 1.2vw;
+    opacity: 0.8;
+    padding-bottom: 2vw;
+    text-align: left;
+    
+}
+
+.slide-text ul li {
+    padding-bottom: 3%;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.slide-more {
+    font-weight: 400;
+    letter-spacing: 0.1vw;
+    float: left;
+    font-size: 0.9vw;
+}
+
+.slide-bullet {
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: #0b8bcc;
+    border-radius: 200%;
+    position: relative;
+    margin-left: 1.2vw;
+}
+
+.slide-nav {
+    margin-left: 64vw;
+    margin-top: -5.5vw;
+}
+
+div.overlay-blue {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: 0.5s ease all;
+}
+
+.columns {
+    float: left;
+    width: 40%;
+    padding: 0 10px;
+}
+
+.slide ul {
+    list-style: none;
+}
+
+div.overlay-blue:hover {
+    background-color: rgba(13, 27, 43, 0.5);
+}
+
+.arrows {
+    width: 3.5vw;
+    margin-top: 1.2vw;
+    margin-left: 50vw;
+    position: relative;
+}
+
+.arrow {
+    display: inline-block;
+    position: absolute;
+    width: 1.2vw;
+    height: 1.2vw;
+    background: #000;
+    text-indent: -9999px;
+    border-top: 0.15vw solid #fff;
+    border-left: 0.15vw solid rgb(0, 0, 0);
+    transition: all .1s ease-in-out;
+    text-decoration: none;
+    color: transparent;
+}
+
+.arrow:hover {
+    border-color: #ff0000;
+    border-width: 0.25vw;
+}
+
+.arrow:before {
+    display: block;
+    height: 200%;
+    width: 200%;
+    margin-left: -50%;
+    margin-top: -50%;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.arrow.prev {
+    transform: rotate(-45deg);
+    left: 0;
+}
+
+.arrow.next {
+    transform: rotate(135deg);
+    right: 0;
+}
+
+.logo-slider {
+    height: 50vh;
+}
+
+.logo-slider .item {
+    background-color: #fff;
+    box-shadow: 0 4px 5px #cacaca;
+    border-radius: 8px;
+    padding: 15px;
+    border: 2px solid #111;
+}
+
+.logo-slider .slick-slide {
+    margin: 15px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff5722;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.sliick-dots li button:before {
+    font-size: 12px;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: #ff8159;
+    font-size: 24px;
+}
+
+.item:hover {
+    display: block;
+    transition: all ease 0.3s;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.footer-list-item {
+    list-style-type: none;
+    display: inline-block;
+    background: #000;
+    height: 40px;
+    width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-list-item>.icon1 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.footer-list {
+    padding: 10px 0;
+    background: #ff0000;
+    text-align: center;
+}
+
+
+/* remove desktop footer on mobile only */
+
+@media screen and (max-width:781px) {
+    .footer-copyright {
+        display: none;
+    }
+    .footer-social-links {
+        display: none;
+    }
+}
+
+@media (max-width:799px) {
+    .side_heading1 {
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 2% 0%;
+        font-size: 28px;
+    }
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .side_text {
+        font-size: 17px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+    .ns-slider-text-area {
+        max-width: 100%;
+        position: absolute;
+        color: #fff;
+        
+    }
+    .border_1{
+        border: 5px solid lightgray;
+        align-items: center;
+    }
+    .logobrand{
+        width: 50%;
+    }
+    .one_1 h1:before {
+        width: 28px;
+        height: 5px;
+        display: block;
+        content: "";
+        position: absolute;
+        /* bottom: 3px; */
+        margin-top: 32px;
+        left: 49%;
+        margin-left: -14px;
+        background-color: #ff0000;
+    }
+    .one_1 p {
+        font-size: 2rem;
+        text-align: center;
+        padding: 3% 0%;
+        font-weight: 600;
+        color: #6c757d;
+        align-items:center;
+    }
+    .ns-slider-text-area{
+        width: 100%;
+       top: 50%!important;
+    }
+    .bgimage {
+        width: 100%;
+    }
+    .site-header {
+        text-align: center;
+        display: block;
+        color: #fff;
+        position: fixed;
+        right: 0px;
+        width: 100%;
+        max-width: 100%;
+        bottom: -60px;
+        transition: top 0.6s ;
+        left: 0px;
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+        -moz-transition: -moz-transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    .site-header.hidden {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
+
+/* new slider withb tab  */
+
+
+/* my style */
+/* reaspnsive style */
+
+@media only screen and (max-width: 1024px) {
+    .slide-image {
+        width: 50vw !important;
+        height: auto;
+    }
+    .slide-content {
+        width: 50vw !important;
+        height: auto;
+        padding: 10px;
+    }
+  }
